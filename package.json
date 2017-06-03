@@ -1,0 +1,71 @@
+{
+  "name": "@naxmefy/toggl",
+  "version": "0.0.0",
+  "description": "node.js lib for toggl api",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "author": {
+    "name": "MRW Neundorf",
+    "email": "m.neundorf@live.de",
+    "url": "http://www.nax.me"
+  },
+  "homepage": "https://github.com/naxmefy/node-toggl",
+  "bugs": {
+    "email": "m.neundorf@live.de",
+    "url": "https://github.com/naxmefy/node-toggl/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naxmefy/node-toggl.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint src test",
+    "lint:fix": "npm run tslint -- --fix",
+    "prepublish": "npm run build",
+    "test": "mocha",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/nock": "^8.2.1",
+    "@types/should": "^8.3.0",
+    "mocha": "^3.3.0",
+    "nock": "^9.0.13",
+    "nyc": "^10.3.2",
+    "should": "^11.2.1",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "tslint-config-standard": "^5.0.2",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "@types/cookie": "^0.3.0",
+    "@types/debug": "0.0.29",
+    "@types/lodash": "^4.14.65",
+    "@types/request": "0.0.43",
+    "@types/request-promise": "^4.1.33",
+    "cookie": "^0.3.1",
+    "debug": "^2.6.8",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
